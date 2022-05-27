@@ -10,10 +10,14 @@ def esEscalar(m):
         print(m[i][j])
         return False
   return True
+def esUnitaria(m):
+    return m[0][0] ==1 and esEscalar(m)
 
-a = [[2,0,0],[0,2,0],[0,0,2]]
+
+a = [[1,0,0],[0,1,0],[0,0,1]]
 for i in range(len(a)):
     for j in range(len(a)):
         print(a[i][j], end="")
     print("")
 print(esEscalar(a))
+print(esUnitaria(a))
